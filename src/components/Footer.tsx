@@ -14,9 +14,9 @@ export function Footer() {
             <a href={links.releases} className="hover:text-mint">
               Releases
             </a>
-            <a href={links.contact} className="hover:text-mint">
+            <Link href="/contact" className="hover:text-mint">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

@@ -102,7 +102,7 @@ export default function Privacy() {
         <section>
           <h2>Contact</h2>
           <p>
-            Questions about this policy: <a href={links.contact}>contact@example.com</a>
+            Questions about this policy: <a href={links.contact}>{links.contactEmail}</a>
           </p>
         </section>
       </div>

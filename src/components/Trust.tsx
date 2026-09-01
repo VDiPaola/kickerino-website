@@ -1,6 +1,6 @@
 const facts = [
   ["No telemetry", "No analytics, no crash reporting, no advertising."],
-  ["No servers", "Talks only to Kick.com and 7TV. Messages go straight to Kick."],
+  ["No servers", "Talks directly to Kick.com, 7TV, and jsDelivr. Messages go straight to Kick."],
   ["No accounts", "Your session stays in a local file on your machine."],
 ];
 

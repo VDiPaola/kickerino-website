@@ -19,6 +19,8 @@ npm run build
 
 `next.config.ts` sets `output: "export"`, so the build writes a fully static site to `out/`. Deploy that folder to any static host (GitHub Pages, Cloudflare Pages, Netlify, Vercel).
 
+The root layout renders `<Analytics />` from `@vercel/analytics`. It records page views only when the site is deployed on Vercel with Web Analytics enabled for the project. On other hosts the script does nothing.
+
 ## Configuration
 
 Copy `.env.example` to `.env.local` and set:

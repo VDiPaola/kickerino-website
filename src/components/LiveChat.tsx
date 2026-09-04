@@ -6,7 +6,7 @@ import { chatMessages, chatUsers } from "@/lib/data";
 import { clock, useClock, useReducedMotion } from "@/lib/hooks";
 
 const emotes = ["/emotes/emote1.avif", "/emotes/emote2.gif"];
-const tabs = ["nickwhite", "Sliker", "Ice Poseidon"];
+const tabs = ["adinross", "Sliker", "Ice Poseidon"];
 
 type Line = { id: number; user: string; color: string; text: string; emote?: number; time?: string };
 

@@ -29,7 +29,7 @@ Copy `.env.example` to `.env.local` and set:
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public URL of the deployed site, used to build absolute Open Graph image URLs. |
 
-Download links, the release repo and the contact address (a placeholder until you set it) live in `src/lib/links.ts`. The displayed version and the release notes on `/whats-new` are read in the browser from the GitHub Releases API (`src/components/Version.tsx`, `src/components/ReleaseNotes.tsx`). The version falls back to "latest" if the request fails. The Microsoft Store badge (`src/components/StoreBadge.tsx`) is not a link yet. It shows a "Coming soon" banner until the Store listing is certified. Direct downloads point at `releases/latest/download/<file>` on the public [Kickerino-releases](https://github.com/VDiPaola/Kickerino-releases) repo, so they always resolve to the newest build:
+Download links, the release repo and the contact address (a placeholder until you set it) live in `src/lib/links.ts`. The displayed version and the release notes on `/whats-new` are read in the browser from the GitHub Releases API (`src/components/Version.tsx`, `src/components/ReleaseNotes.tsx`). The version falls back to "latest" if the request fails. The Microsoft Store badge (`src/components/StoreBadge.tsx`) links to `NEXT_PUBLIC_MS_STORE_URL`, falling back to a Store search for Kickerino. Direct downloads point at `releases/latest/download/<file>` on the public [Kickerino-releases](https://github.com/VDiPaola/Kickerino-releases) repo, so they always resolve to the newest build:
 
 - `Kickerino-win-Setup.exe`
 - `Kickerino-win-Portable.zip`

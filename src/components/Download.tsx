@@ -41,11 +41,10 @@ export function Download() {
         <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
           <div className="flex flex-col justify-between gap-8 rounded-lg border border-mint/40 bg-panel p-8">
             <div>
-              <p className="pixel-tag mb-3">Coming soon</p>
+              <p className="pixel-tag mb-3">Recommended</p>
               <h3 className="text-2xl font-semibold">Microsoft Store</h3>
               <p className="mt-2 max-w-md text-fog">
                 One click install, automatic updates and no SmartScreen prompts. Windows 10 and later.
-                The Store listing is in certification. Use a direct download until it is live.
               </p>
             </div>
             <StoreBadge large />

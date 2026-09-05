@@ -9,6 +9,9 @@ export const links = {
   winSetup: `${LATEST}/Kickerino-win-Setup.exe`,
   winPortable: `${LATEST}/Kickerino-win-Portable.zip`,
   linux: `${LATEST}/Kickerino.AppImage`,
+  store:
+    process.env.NEXT_PUBLIC_MS_STORE_URL ??
+    "https://apps.microsoft.com/search?query=Kickerino",
   releases: RELEASES,
   latestApi: `https://api.github.com/repos/${REPO}/releases/latest`,
   contactEmail: CONTACT_EMAIL,

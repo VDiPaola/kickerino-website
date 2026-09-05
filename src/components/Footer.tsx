@@ -11,6 +11,9 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-mint">
               Privacy
             </Link>
+            <Link href="/whats-new" className="hover:text-mint">
+              What&apos;s new
+            </Link>
             <a href={links.releases} className="hover:text-mint">
               Releases
             </a>

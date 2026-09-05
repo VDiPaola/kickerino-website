@@ -6,9 +6,6 @@ const CONTACT_EMAIL =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@example.com";
 
 export const links = {
-  store:
-    process.env.NEXT_PUBLIC_MS_STORE_URL ??
-    "https://apps.microsoft.com/search?query=Kickerino",
   winSetup: `${LATEST}/Kickerino-win-Setup.exe`,
   winPortable: `${LATEST}/Kickerino-win-Portable.zip`,
   linux: `${LATEST}/Kickerino.AppImage`,

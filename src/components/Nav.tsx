@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { Mark } from "./PixelIcon";
 import { Version } from "./Version";
 
 const items = [
-  ["Features", "#features"],
-  ["Screens", "#screens"],
-  ["Commands", "#commands"],
+  ["Features", "/#features"],
+  ["Screens", "/#screens"],
+  ["Commands", "/#commands"],
+  ["What's new", "/whats-new"],
 ];
 
 export function Nav() {
@@ -21,9 +23,9 @@ export function Nav() {
         <ul className="hidden md:flex items-center gap-7 text-sm text-fog">
           {items.map(([label, href]) => (
             <li key={href}>
-              <a href={href} className="hover:text-mint transition-colors">
+              <Link href={href} className="hover:text-mint transition-colors">
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { LiveChat } from "./LiveChat";
 import { StoreBadge } from "./StoreBadge";
+import { Version } from "./Version";
 import { links } from "@/lib/links";
 
 const direct = [
@@ -37,6 +39,9 @@ export function Hero() {
               ))}
               <span>macOS soon</span>
             </div>
+            <Link href="/whats-new" className="stamp -mt-2 underline decoration-line-2 underline-offset-4 hover:text-mint">
+              What&apos;s new in <Version fallback="the latest version" />
+            </Link>
           </div>
         </div>
 

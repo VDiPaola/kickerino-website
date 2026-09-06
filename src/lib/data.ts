@@ -108,6 +108,8 @@ export const chatUsers: ChatUser[] = [
   { name: "PatWiFi", color: "#f0b232" },
   { name: "twoslav", color: "#4bd6ff" },
   { name: "ouis", color: "#ff9c3a" },
+  { name: "tjcool", color: "#00ff88" },
+  { name: "RealityDOSE", color: "#ff5c5c" },
 ];
 
 export const chatMessages = [

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { HomeLink } from "@/components/HomeScroll";
 import { Mark } from "@/components/PixelIcon";
 import { links } from "@/lib/links";
 
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function Privacy() {
   return (
     <main className="mx-auto max-w-3xl px-5 py-16">
-      <Link href="/" className="flex items-center gap-2.5 font-semibold">
+      <HomeLink className="flex items-center gap-2.5 font-semibold">
         <Mark /> Kickerino
-      </Link>
+      </HomeLink>
       <p className="stamp mt-12">Last updated 30 August 2026</p>
       <h1 className="mt-2 text-4xl font-bold tracking-tight">Privacy Policy</h1>
       <p className="mt-4 text-fog">

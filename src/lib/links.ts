@@ -17,5 +17,8 @@ export const links = {
   contactEmail: CONTACT_EMAIL,
   contact: `mailto:${CONTACT_EMAIL}`,
   discordUser: "@enzonik",
-  discordServer: "https://discord.gg/QBEVSUp5sc",
+  discordServer: "https://discord.gg/Y6H93EyZ96",
+  streambench: "https://streambench.cc",
 };
+
+export const discordInvite = links.discordServer.replace(/^https?:\/\//, "");

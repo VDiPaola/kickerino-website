@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable} ${silkscreen.variable} h-full`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${jetbrains.variable} ${silkscreen.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />

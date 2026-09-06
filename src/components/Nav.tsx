@@ -6,7 +6,6 @@ const items = [
   ["Features", "/#features"],
   ["Screens", "/#screens"],
   ["Commands", "/#commands"],
-  ["What's new", "/whats-new"],
 ];
 
 export function Nav() {

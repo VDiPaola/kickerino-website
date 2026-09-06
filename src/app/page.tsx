@@ -6,10 +6,12 @@ import { Showcase } from "@/components/Showcase";
 import { Commands } from "@/components/Commands";
 import { Download } from "@/components/Download";
 import { Footer } from "@/components/Footer";
+import { RestoreHomeScroll } from "@/components/HomeScroll";
 
 export default function Home() {
   return (
     <>
+      <RestoreHomeScroll />
       <Nav />
       <main>
         <Hero />

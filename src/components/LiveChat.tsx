@@ -6,7 +6,14 @@ import { chatMessages, chatUsers } from "@/lib/data";
 import { clock, useClock, useReducedMotion } from "@/lib/hooks";
 
 const emotes = ["/emotes/emote1.avif", "/emotes/emote2.gif"];
-const tabs = ["AdinRoss", "Sliker", "Ice Poseidon"];
+const streams = [
+  { name: "AdinRoss", title: "IRL in LA" },
+  { name: "Sliker", title: "Just Chatting" },
+  { name: "Ice Poseidon", title: "Day in the life" },
+  { name: "trainwreckstv", title: "Late night talk" },
+  { name: "xqc", title: "REACT + GAMES" },
+  { name: "odablock", title: "OSRS PvP grind" },
+];
 
 type Line = { id: number; user: string; color: string; text: string; emote?: number; time?: string };
 
@@ -41,6 +48,8 @@ export function LiveChat() {
   const list = useRef<HTMLDivElement>(null);
   const now = useClock();
   const reduced = useReducedMotion();
+  const [active, setActive] = useState(2);
+  const stream = streams[active];
 
   useEffect(() => {
     if (reduced) return;
@@ -58,7 +67,7 @@ export function LiveChat() {
   return (
     <div
       className="flex h-[560px] w-full max-w-[400px] flex-col overflow-hidden rounded-lg border border-white/15 bg-[#050f09] text-[13px] shadow-[0_30px_80px_-20px_rgba(0,255,136,0.25)]"
-      role="img"
+      role="group"
       aria-label="Kickerino chat window showing a live Kick chatroom"
     >
       <div className="flex items-center justify-between border-b border-white/10 bg-[#0c1610] px-3 py-1.5 text-xs">
@@ -71,22 +80,25 @@ export function LiveChat() {
         </span>
       </div>
       <div className="flex flex-wrap gap-1.5 border-b border-white/10 bg-[#0c1610] p-2">
-        {tabs.map((t, i) => (
-          <span
-            key={t}
-            className={`rounded-md border px-2 py-0.5 text-xs ${
-              i === 2 ? "border-mint/60 bg-[#1f3a2c] text-white" : "border-white/15 text-fog"
+        {streams.map((s, i) => (
+          <button
+            key={s.name}
+            type="button"
+            aria-pressed={i === active}
+            onClick={() => setActive(i)}
+            className={`cursor-pointer rounded-md border px-2 py-0.5 text-xs transition-colors focus-visible:outline-2 focus-visible:outline-mint ${
+              i === active ? "border-mint/60 bg-[#1f3a2c] text-white" : "border-white/15 text-fog hover:border-white/30 hover:text-white"
             }`}
           >
-            {t} <span className="ml-1 text-moss">&#10005;</span>
-          </span>
+            {s.name} <span className="ml-1 text-moss" aria-hidden>&#10005;</span>
+          </button>
         ))}
         <span className="rounded-md border border-white/15 px-2 py-0.5 text-xs text-fog">Add +</span>
       </div>
       <div className="flex items-center gap-2 border-b border-white/10 px-3 py-2 text-xs">
-        <span className="font-semibold text-white">Ice Poseidon</span>
+        <span className="font-semibold text-white">{stream.name}</span>
         <span className="live-dot inline-block h-2 w-2 rounded-full bg-live" />
-        <span className="truncate text-moss">Day in the life</span>
+        <span className="truncate text-moss">{stream.title}</span>
       </div>
 
       <div ref={list} className="chat-scroll flex-1 overflow-y-auto px-2 py-1">

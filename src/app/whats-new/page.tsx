@@ -6,6 +6,7 @@ import { ReleaseNotes } from "@/components/ReleaseNotes";
 export const metadata: Metadata = {
   title: "What's new | Kickerino",
   description: "Release notes for the latest Kickerino version.",
+  alternates: { canonical: "/whats-new/" },
 };
 
 export default function WhatsNew() {

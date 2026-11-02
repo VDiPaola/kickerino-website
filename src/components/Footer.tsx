@@ -40,6 +40,9 @@ export function Footer() {
               <LeaveHomeLink href="/contact" className="hover:text-mint">
                 Contact
               </LeaveHomeLink>
+              <LeaveHomeLink href="/product-identity/" className="hover:text-mint">
+                Product identity
+              </LeaveHomeLink>
             </nav>
           </div>
 

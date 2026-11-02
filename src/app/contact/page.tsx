@@ -6,6 +6,7 @@ import { links } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Contact | Kickerino",
   description: "Get in touch about Kickerino by email or Discord.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function Contact() {

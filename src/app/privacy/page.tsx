@@ -6,6 +6,7 @@ import { links } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Privacy Policy | Kickerino",
   description: "What data Kickerino handles, where it is stored, and which external services it communicates with.",
+  alternates: { canonical: "/privacy/" },
 };
 
 export default function Privacy() {

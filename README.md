@@ -27,9 +27,9 @@ Copy `.env.example` to `.env.local` and set:
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Public URL of the deployed site, used to build absolute Open Graph image URLs. |
+| `NEXT_PUBLIC_SITE_URL` | Public URL of the deployed site. Defaults to `https://www.kickerino.com`. Used for canonical URLs, the sitemap, JSON-LD, `llms.txt` and Open Graph image URLs. |
 
-Download links, the release repo, the StreamBench site, the Discord invite and the contact address (a placeholder until you set it) live in `src/lib/links.ts`. The displayed version and the release notes on `/whats-new` are read in the browser from the GitHub Releases API (`src/components/Version.tsx`, `src/components/ReleaseNotes.tsx`). The version falls back to "latest" if the request fails. The Microsoft Store badge (`src/components/StoreBadge.tsx`) links to `NEXT_PUBLIC_MS_STORE_URL`, falling back to a Store search for Kickerino. Direct downloads point at `releases/latest/download/<file>` on the public [Kickerino-releases](https://github.com/VDiPaola/Kickerino-releases) repo, so they always resolve to the newest build:
+Download links, the release repo, the StreamBench site, the Discord invite and the contact address (a placeholder until you set it) live in `src/lib/links.ts`. The displayed version and the release notes on `/whats-new` are read in the browser from the GitHub Releases API (`src/components/Version.tsx`, `src/components/ReleaseNotes.tsx`). The version falls back to "latest" if the request fails. The Microsoft Store badge (`src/components/StoreBadge.tsx`) links to `NEXT_PUBLIC_MS_STORE_URL`, falling back to the Store listing (product ID `9PH17GRBMQ4K`). Direct downloads point at `releases/latest/download/<file>` on the public [Kickerino-releases](https://github.com/VDiPaola/Kickerino-releases) repo, so they always resolve to the newest build:
 
 - `Kickerino-win-Setup.exe`
 - `Kickerino-win-Portable.zip`
@@ -46,6 +46,9 @@ Download links, the release repo, the StreamBench site, the Discord invite and t
 | `src/app/privacy/page.tsx` | Privacy policy, mirrors `PRIVACY.md` in the app repo |
 | `src/components/HomeScroll.tsx` | Links that remember the home page scroll position, restored when a subpage links back to `/` |
 | `public/screens/` | App screenshots used in the showcase |
+| `src/lib/identity.ts` | Product identity and disambiguation content: identity statement, comparison with the separate Kickerino by CarlBraun, public timeline, quoted third-party statements, FAQ. Single source for `/product-identity`, metadata, JSON-LD and `/llms.txt` |
+| `src/lib/structured-data.ts` | Schema.org JSON-LD graphs for the home and product identity pages, rendered with `src/components/JsonLd.tsx` |
+| `src/app/sitemap.ts`, `src/app/robots.ts`, `src/app/llms.txt/route.ts` | Generated at build time to `out/sitemap.xml`, `out/robots.txt` and `out/llms.txt` |
 
 ### Adding a screenshot
 

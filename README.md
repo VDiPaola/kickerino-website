@@ -39,19 +39,25 @@ Download links, the release repo, the StreamBench site, the Discord invite and t
 
 | File | Content |
 | --- | --- |
-| `src/lib/data.ts` | Feature list, slash commands, keyboard shortcuts, demo chat lines |
+| `src/lib/data.ts` | Chatter, moderator and streamer highlights, slash commands, keyboard shortcuts, demo chat lines |
+| `src/lib/themes.ts` | App theme palettes used by the interactive demos, copied from `src/ui/theme.rs` in the app repo |
 | `src/components/` | One component per page section |
+| `src/components/Roles.tsx` | Chatters, Moderators and Streamers sections. Each pairs a highlight list with an interactive demo (`ChatterDemo`, `ModDemo`, `StreamerDemo`) built on the shared window parts in `AppWindow.tsx` |
 | `src/app/privacy/page.tsx` | Privacy policy, mirrors `PRIVACY.md` in the app repo |
 | `src/components/HomeScroll.tsx` | Links that remember the home page scroll position, restored when a subpage links back to `/` |
 | `public/screens/` | App screenshots used in the showcase |
+
+### Adding a screenshot
+
+`src/components/Showcase.tsx` lists the gallery shots. A shot without `src` renders a "Screenshot coming soon" placeholder. To fill one, put the image in `public/screens/` and set `src` (for example `/screens/user-panel.png`) plus its pixel `w` and `h`.
 
 ## Structure
 
 ```
 src/
   app/            layout, home page, privacy page, global styles
-  components/     Nav, Hero, LiveChat, Trust, Features, Showcase, Commands, Download, Footer
-  lib/            links.ts (URLs, version), data.ts (page content)
+  components/     Nav, Hero, LiveChat, Trust, Showcase, Roles, Commands, Download, Footer
+  lib/            links.ts (URLs, version), data.ts (page content), themes.ts, format.ts
 public/
   brand/          app icon
   screens/        screenshots

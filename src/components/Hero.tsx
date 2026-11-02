@@ -37,7 +37,6 @@ export function Hero() {
                   {label}
                 </a>
               ))}
-              <span>macOS soon</span>
             </div>
             <LeaveHomeLink href="/whats-new" className="stamp -mt-2 underline decoration-line-2 underline-offset-4 hover:text-mint">
               What&apos;s new in <Version fallback="the latest version" />

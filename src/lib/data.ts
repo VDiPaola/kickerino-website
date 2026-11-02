@@ -1,57 +1,97 @@
-export type Feature = { icon: string[]; title: string; body: string; span?: boolean };
+export type RolePoint = { icon: string[]; title: string; body: string };
 
-export const features: Feature[] = [
+const icons = {
+  tabs: ["11.1.11", "11.1.11", ".......", "11.1.11", "11.1.11", ".......", "1111111"],
+  stv: [".11111.", "1.....1", "1.1.1.1", "1.....1", "1.111.1", "1.....1", ".11111."],
+  eye: [".......", "..111..", ".1...1.", "1..1..1", ".1...1.", "..111..", "......."],
+  bars: [".....1.", ".....1.", "...1.1.", "...1.1.", ".1.1.1.", ".1.1.1.", "1111111"],
+  chest: [".11111.", "1111111", "1.....1", "111.111", "1..1..1", "1.....1", "1111111"],
+  bolt: ["...11..", "..11...", ".11....", "11111..", "...11..", "..11...", ".11...."],
+  shield: ["1111111", "1..1..1", "1.111.1", "1..1..1", "1..1..1", ".1...1.", "..111.."],
+  log: ["11111..", "1...11.", "1.....1", "1.111.1", "1.....1", "1.111.1", "1111111"],
+  prompt: ["1111111", "1.....1", "1.1...1", "1..1..1", "1.1.111", "1.....1", "1111111"],
+  user: ["..111..", ".1...1.", ".1...1.", "..111..", ".......", ".11111.", "1.....1"],
+  pencil: [".....1.", "....111", "...111.", "..111..", ".111...", "1.1....", "11....."],
+  toggle: [".......", ".......", ".11111.", "1..1111", "1..1111", ".11111.", "......."],
+  bell: ["...1...", "..111..", ".11111.", ".11111.", ".11111.", "1111111", "...1..."],
+};
+
+export const chatterPoints: RolePoint[] = [
   {
-    icon: ["11.1.11", "11.1.11", ".......", "11.1.11", "11.1.11", ".......", "1111111"],
-    title: "Multiple chatrooms, one window",
-    body: "Tabs with drag and drop reordering, unread counters and live status. Stream tabs can sit on the top, left or right.",
-    span: true,
+    icon: icons.tabs,
+    title: "Multiple streams, one window",
+    body: "Up to ten tabs with live status. Every native Kick chat feature works in each one.",
   },
   {
-    icon: ["..1.1..", ".1.1.1.", "1.1.1.1", ".1.1.1.", "1.1.1.1", ".1.1.1.", "..1.1.."],
-    title: "Overlay popup",
-    body: "Overlay a chat window with transparency over a stream for an immersive experience.",
+    icon: icons.stv,
+    title: "7TV built in",
+    body: "Channel and personal 7TV emotes, paints and badges, with :emote and @user autocomplete.",
   },
   {
-    icon: [".11111.", "1.....1", "1.1.1.1", "1.....1", "1.111.1", "1.....1", ".11111."],
-    title: "7TV",
-    body: "Global, channel and personal emote sets. Zero width overlays, paints and badges render the way 7TV intends.",
+    icon: icons.eye,
+    title: "See what Kick hides",
+    body: "Deleted messages stay readable, and bans and timeouts show which moderator acted.",
   },
   {
-    icon: ["1111111", "1.....1", "1.1.1.1", "1.....1", "1.....1", "1..1..1", "1111111"],
-    title: "Emotes everywhere",
-    body: "Kick and subscriber emotes, emoji, pickers and :name / @user autocompletion. Typed emotes render inline in the input.",
+    icon: icons.bars,
+    title: "Predictions and polls",
+    body: "Vote in polls, wager channel points on predictions and redeem rewards without a browser.",
   },
   {
-    icon: ["...1...", "..111..", ".11111.", "1111111", "...1...", "...1...", "...1..."],
-    title: "Built for speed",
-    body: "Virtualised message list, cached parsing and async image pipeline with disk and GPU caching.",
-    span: true,
+    icon: icons.chest,
+    title: "Daily chest on autopilot",
+    body: "Auto claim the daily chest, and earn channel points from every live tab.",
+  },
+];
+
+export const moderatorPoints: RolePoint[] = [
+  {
+    icon: icons.bolt,
+    title: "Quick actions on every message",
+    body: "Timeout, ban or delete in one click. Timeout length is a slider, not a typed command.",
   },
   {
-    icon: [".11111.", "1.....1", "1.1.1.1", "1.....1", ".1...1.", "..1.1..", "...1..."],
-    title: "Moderation tools",
-    body: "User cards with channel message history, quick mod actions, slash commands, and mod events logs",
+    icon: icons.shield,
+    title: "Level badges, always on",
+    body: "Force the Kick level badge on for every chatter, so new and low level accounts stand out.",
   },
   {
-    icon: ["1111111", "1.....1", "1.11..1", "1.11..1", "1.....1", "1111111", "1.1.1.1"],
-    title: "Clips",
-    body: "/clip [seconds] [title] captures the last 10 to 180 seconds of stream and pops up a shareable link.",
+    icon: icons.log,
+    title: "User cards with chat logs",
+    body: "Recent channel messages, every badge the user owns, and a direct link to their full chat logs.",
   },
   {
-    icon: ["..111..", ".1...1.", "1.....1", "1.....1", ".1...1.", "..111.1", ".....11"],
-    title: "Stay in the loop",
-    body: "Reply threads, search, chatters list, mentions tab and highlight phrases with custom sounds.",
+    icon: icons.prompt,
+    title: "Every Kick command",
+    body: "All moderator slash commands with an autocomplete popup. Start polls and predictions from chat.",
+  },
+];
+
+export const streamerPoints: RolePoint[] = [
+  {
+    icon: icons.user,
+    title: "One click user panel",
+    body: "Manage your entire stream without typing a single command.",
   },
   {
-    icon: ["1......", "11.....", "111....", "1111...", "11111..", "111111.", "1111111"],
-    title: "Native desktop",
-    body: "Always on top, frameless window with a custom title bar.",
+    icon: icons.pencil,
+    title: "Title, category and 18+",
+    body: "Edit the stream title, change category and set the mature label, live or offline.",
   },
   {
-    icon: ["..1.1..", "..1.1..", "1111111", ".1...1.", "1111111", "..1.1..", "..1.1.."],
-    title: "Easy sign in",
-    body: "Import your Kick session straight from your browser, with manual login methods as fallbacks.",
+    icon: icons.toggle,
+    title: "Chat modes from dropdowns",
+    body: "Followers only, slow, subscribers only and emote only, set with dropdowns and switches.",
+  },
+  {
+    icon: icons.bars,
+    title: "Polls, predictions and logs",
+    body: "Start polls and predictions, open the mod log and activity feed, or clear chat from the same panel.",
+  },
+  {
+    icon: icons.bell,
+    title: "Activity inline",
+    body: "Subs, gifted subs, Kicks and channel point redemptions appear in chat, with a searchable activity feed.",
   },
 ];
 

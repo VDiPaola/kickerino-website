@@ -32,7 +32,7 @@ export function Download() {
           <Mark size={48} />
           <div>
             <p className="stamp">
-              <span className="text-mint">04</span> {"//"} download
+              <span className="text-mint">06</span> {"//"} download
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Get Kickerino</h2>
           </div>

@@ -1,11 +1,13 @@
 import Image from "next/image";
 
-export function PixelIcon({ rows, className = "" }: { rows: string[]; className?: string }) {
+type PixelIconProps = { rows: string[]; className?: string; tone?: string };
+
+export function PixelIcon({ rows, className = "", tone = "bg-mint" }: PixelIconProps) {
   return (
     <div className={`grid grid-cols-7 gap-px w-7 h-7 ${className}`} aria-hidden>
       {rows.flatMap((row, y) =>
         row.split("").map((c, x) => (
-          <span key={`${x}-${y}`} className={c === "1" ? "bg-mint" : "bg-transparent"} />
+          <span key={`${x}-${y}`} className={c === "1" ? tone : "bg-transparent"} />
         )),
       )}
     </div>

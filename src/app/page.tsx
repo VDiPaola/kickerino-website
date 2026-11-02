@@ -1,7 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
-import { Features } from "@/components/Features";
+import { Chatters, Moderators, Streamers } from "@/components/Roles";
 import { Showcase } from "@/components/Showcase";
 import { Commands } from "@/components/Commands";
 import { Download } from "@/components/Download";
@@ -16,8 +16,10 @@ export default function Home() {
       <main>
         <Hero />
         <Trust />
-        <Features />
         <Showcase />
+        <Chatters />
+        <Moderators />
+        <Streamers />
         <Commands />
         <Download />
       </main>

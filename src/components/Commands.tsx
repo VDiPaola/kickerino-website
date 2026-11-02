@@ -36,7 +36,7 @@ export function Commands() {
   const text = useTypewriter(typed);
 
   return (
-    <Section id="commands" index="03" title="Manage everything from one place" lead="Slash command support">
+    <Section id="commands" index="05" title="Manage everything from one place" lead="Slash command support">
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="overflow-hidden rounded-md border border-white/12 bg-[#050f09] font-mono text-sm">
           <div className="grid max-h-[420px] grid-cols-1 overflow-y-auto sm:grid-cols-2">

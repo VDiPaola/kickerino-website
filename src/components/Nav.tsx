@@ -3,8 +3,10 @@ import { Mark } from "./PixelIcon";
 import { Version } from "./Version";
 
 const items = [
-  ["Features", "/#features"],
   ["Screens", "/#screens"],
+  ["Chatters", "/#chatters"],
+  ["Moderators", "/#moderators"],
+  ["Streamers", "/#streamers"],
   ["Commands", "/#commands"],
 ];
 
@@ -19,7 +21,7 @@ export function Nav() {
             <Version />
           </span>
         </a>
-        <ul className="hidden md:flex items-center gap-7 text-sm text-fog">
+        <ul className="hidden lg:flex items-center gap-6 text-sm text-fog">
           {items.map(([label, href]) => (
             <li key={href}>
               <Link href={href} className="hover:text-mint transition-colors">

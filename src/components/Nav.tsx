@@ -7,6 +7,7 @@ const items = [
   ["Chatters", "/#chatters"],
   ["Moderators", "/#moderators"],
   ["Streamers", "/#streamers"],
+  ["Performance", "/#performance"],
   ["Commands", "/#commands"],
 ];
 

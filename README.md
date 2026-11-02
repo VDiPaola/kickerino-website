@@ -39,11 +39,12 @@ Download links, the release repo, the StreamBench site, the Discord invite and t
 
 | File | Content |
 | --- | --- |
-| `src/lib/data.ts` | Chatter, moderator and streamer highlights, slash commands, keyboard shortcuts, demo chat lines |
+| `src/lib/data.ts` | Chatter, moderator and streamer highlights, slash commands, keyboard shortcuts, demo chat lines, memory chart series |
 | `src/lib/themes.ts` | App theme palettes used by the interactive demos, copied from `src/ui/theme.rs` in the app repo |
 | `src/components/` | One component per page section |
 | `src/components/Roles.tsx` | Chatters, Moderators and Streamers sections. Each pairs a highlight list with an interactive demo (`ChatterDemo`, `ModDemo`, `StreamerDemo`) built on the shared window parts in `AppWindow.tsx` |
 | `src/app/privacy/page.tsx` | Privacy policy, mirrors `PRIVACY.md` in the app repo |
+| `src/components/Performance.tsx` | Memory comparison chart. Plots `memoryUsage` (one value in MB per minute) against the `memoryPhases` bands from `data.ts`. The labelled values are read from the series, so editing the arrays updates the chart and its labels |
 | `src/components/HomeScroll.tsx` | Links that remember the home page scroll position, restored when a subpage links back to `/` |
 | `public/screens/` | App screenshots used in the showcase |
 | `src/lib/identity.ts` | Product identity and disambiguation content: identity statement, comparison with the separate Kickerino by CarlBraun, public timeline, quoted third-party statements, FAQ. Single source for `/product-identity`, metadata, JSON-LD and `/llms.txt` |
@@ -59,7 +60,7 @@ Download links, the release repo, the StreamBench site, the Discord invite and t
 ```
 src/
   app/            layout, home page, privacy page, global styles
-  components/     Nav, Hero, LiveChat, Trust, Showcase, Roles, Commands, Download, Footer
+  components/     Nav, Hero, LiveChat, Trust, Showcase, Roles, Performance, Commands, Download, Footer
   lib/            links.ts (URLs, version), data.ts (page content), themes.ts, format.ts
 public/
   brand/          app icon

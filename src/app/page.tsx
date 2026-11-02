@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
 import { Chatters, Moderators, Streamers } from "@/components/Roles";
 import { Showcase } from "@/components/Showcase";
+import { Performance } from "@/components/Performance";
 import { Commands } from "@/components/Commands";
 import { Download } from "@/components/Download";
 import { IdentityNotice } from "@/components/IdentityNotice";
@@ -29,6 +30,7 @@ export default function Home() {
         <Chatters />
         <Moderators />
         <Streamers />
+        <Performance />
         <Commands />
         <Download />
         <IdentityNotice />

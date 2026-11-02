@@ -675,3 +675,20 @@ export const chatMessages = [
   "its already on twitter",
   "cant believe im still awake",
 ];
+
+export const memoryPhases = [
+  { label: "Idle", from: 0, to: 8 },
+  { label: "Heavy load", from: 8, to: 18 },
+  { label: "Back to idle", from: 18, to: 30 },
+];
+
+export const memoryUsage = {
+  kickerino: [
+    38, 40, 39, 41, 40, 38, 40, 39, 62, 84, 92, 97, 94, 99, 96, 100, 95, 98, 44, 40, 39, 41, 40, 38, 40, 39, 41, 40, 39,
+    40, 39,
+  ],
+  others: [
+    172, 176, 174, 178, 175, 173, 177, 175, 250, 350, 400, 428, 440, 436, 448, 450, 444, 449, 452, 448, 430, 410, 392,
+    374, 356, 340, 326, 312, 300, 290, 282,
+  ],
+};

@@ -65,13 +65,6 @@ export function Download() {
                 </a>
               </li>
             ))}
-            <li className="flex flex-col items-start gap-2 rounded-lg border border-dashed sm:flex-row sm:items-center sm:justify-between sm:gap-4 border-line-2 p-5 text-moss">
-              <span>
-                <span className="block font-semibold">macOS</span>
-                <span className="mt-0.5 block text-sm">Signed and notarised build in progress.</span>
-              </span>
-              <span className="pixel-tag shrink-0 text-moss">Coming soon</span>
-            </li>
           </ul>
         </div>
 
